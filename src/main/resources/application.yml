@@ -3,3 +3,9 @@ server:
 spring:
   application:
     name: springboot-upload
+  #方法一：yml配置控制文件上传大小，单文件不超过5MB 多文件不超过15MB
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 15MB
